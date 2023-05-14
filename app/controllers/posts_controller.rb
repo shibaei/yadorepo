@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-    before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit, :destroy]
   
     def index
       @posts = Post.all
@@ -20,7 +22,7 @@ class PostsController < ApplicationController
       if @post.save
         redirect_to posts_path
       else
-        render "new"
+        render :new
       end
     end
   
@@ -28,7 +30,7 @@ class PostsController < ApplicationController
       if @post.update(post_params)
         redirect_to posts_path
       else
-        render "edit"
+        render :edit
       end
     end
   
@@ -44,8 +46,12 @@ class PostsController < ApplicationController
     end
     
     def post_params
-      params.require(:post).permit(:title,	:hotel,	:room,	:check_in,	:check_out,	:text, :image).merge(user_id: current_user.id)
+      params.require(:post).permit(:title,	:hotel,	:room,	:check_in,	:check_out,	:text, :place_id, :image).merge(user_id: current_user.id)
+    end
+
+    def move_to_index
+      return if current_user.id == @post.user_id
+      redirect_to action: :index
     end
   
-  end
 end
