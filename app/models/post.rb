@@ -2,6 +2,8 @@ class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :place
 
+  has_one_attached :images
+
   validates :title,	:hotel,	:room,	:check_in,	:check_out,	:text, presence: true
 
   belongs_to :user  

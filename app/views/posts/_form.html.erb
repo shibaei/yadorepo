@@ -1,0 +1,17 @@
+<%= form_with(model: post, local: true, data: { controller: "images"}) do |f| %>
+
+  <div class="mb-3">
+    <%= f.label :title, "タイトル", class: "font-semibold block p-1" %>
+    <%= f.text_field :title, autofocus: true, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :images, "画像", class: "font-semibold block p-1" %>
+    <%= f.file_field :images, multiple: true, accept: "image/jpeg,image/gif,image/png", data: { images_target: "select", action: "change->images#selectImages" } %>
+        <p data-images-target="error" class="text-red-600"></p>
+  </div>
+
+  <div class="mb-3">
+    <%= f.submit  "投稿する", class: "btn btn-sky" %>
+  </div>
+<% end %>
