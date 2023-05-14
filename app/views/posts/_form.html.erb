@@ -38,14 +38,17 @@
     <%= f.text_area :text, id:"post_text" %>
   </div>
 
-  <div class="field">
-    <%= f.label :image, "画像" %><br />
-    <%= f.file_field :image, id:"prototype_image" %>
+
+  <div class="image-field">
+    <%= f.label :images, "画像" %><br />
     <div id="previews"></div>
-  </div>
+    <div class="click-upload">
+      <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
+    </div>
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
   </div>
 <% end %>
 
+<%= link_to "＜　内容を削除してトップへ戻る", root_path, class: :return%>
