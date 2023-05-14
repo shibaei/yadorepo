@@ -1,10 +1,9 @@
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: #f3bf88;
   margin-bottom: 48px;
   padding: 20px 0;
-
 }
 .inner {
   width: 1024px;
@@ -12,33 +11,38 @@
 }
 .nav {
   width: 100%;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
-.logo {
-  width: 50px;
+
+.logo{
+  height: 50px;
 }
+
 .nav__btn{
+  background-color: #f2dbc2;
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #3D3D3D;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #3D3D3D solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
-  color: #fff;
-  background: #87CEFA;
+  color: #665039;
+  background: #ffffff ;
 }
 
-.nav__logout{
+.nav__user,.nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #3D3D3D;
   text-decoration: none;
   user-select: none;
 }
@@ -46,11 +50,10 @@
   opacity: 0.5;
 }
 
-
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: #665747;
   padding: 10px 0;
 }
 .copyright {

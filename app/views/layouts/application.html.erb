@@ -15,19 +15,16 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to root_path do %>
-              <%= image_tag("rogo_icon.png", class: :logo) %>
-              宿レポ
-            <% end %>
+            <%= link_to image_tag("rogo_icon", class: :logo), root_path %>
           </div>
+         
            <% if user_signed_in? %>
-              <div class="greeting">
-              こんにちは、
-              <%= current_user.nickname%>さん
-            </div>
             <div class="nav__right">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class: :nav__logout %>
+              <div class="nav__user">
+                ユーザー名：<%= current_user.nickname%>
+              </div>
               <%= link_to "宿レポ投稿", new_post_path, class: :nav__btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class: :nav__logout %>
             </div>
            <% else %>
             <div class="nav__right">
