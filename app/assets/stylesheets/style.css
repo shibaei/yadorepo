@@ -92,3 +92,23 @@ img {
   margin-bottom: 5px;  
   width: 50px;
 }
+
+/* 検索 */
+.search-form {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.search-form .search-input {
+  width: 70%;
+  height: 40px;
+  margin-right: 10px;
+  color: #3D3D3D;
+}
+
+.search-btn {
+  color: #3D3D3D;
+  background-color: #f3bf88;
+  width: 10%;
+  height: 40px;
+}
