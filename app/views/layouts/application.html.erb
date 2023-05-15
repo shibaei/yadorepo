@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicon.ico' %>
   </head>
 
   <body>
@@ -21,7 +22,7 @@
            <% if user_signed_in? %>
             <div class="nav__right">
               <div class="nav__user">
-                ユーザー名：<%= current_user.nickname%>
+                なまえ：<%= current_user.nickname%>
               </div>
               <%= link_to "宿レポ投稿", new_post_path, class: :nav__btn %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class: :nav__logout %>
