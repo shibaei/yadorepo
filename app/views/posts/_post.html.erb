@@ -5,6 +5,8 @@
     <p class="card__summary">
       <%= post.text %>
     </p>
-    by<%=post.user.nickname%>
+    <div class="card__user">
+      by:<%= post.user.nickname%>
+    </div>
   </div>
 </div>
