@@ -3,7 +3,10 @@
   <div class="card__body">
     <%= link_to post.title, post_path(post.id), class: :card__title%>
     <p class="card__summary">
-      <%= post.text %>
+      <%= post.text[0..82] %>
+      <% if post.text.length >= 83 %>
+        ...
+      <% end %>
     </p>
     <div class="card__user">
       by:<%= post.user.nickname%>
