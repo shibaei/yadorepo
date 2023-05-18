@@ -50,6 +50,7 @@
   opacity: 0.5;
 }
 
+
 /* フッター */
 
 .footer {
@@ -149,11 +150,36 @@ img {
   color: #3D3D3D;
 }
 .card__summary {
-  font-size: 16px;
+  font-size: 1.25vw;
 }
 .card__user {
   display: block;
   font-size: 12px;
   color: #999;
   text-decoration: underline;
+}
+
+/* 記事　詳細ページ */
+
+.post__btn {
+  text-align: center;
+  background-color: #f2dbc2;
+  color: #3D3D3D;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+  border-radius: 3px;
+  text-decoration: none;
+  
+  border: 1px #3D3D3D solid;
+}
+
+.post__destroy {
+  background-color: lightgray;
+  text-align: center;
+  color: #3D3D3D;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px #3D3D3D solid;
 }

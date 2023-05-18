@@ -1,4 +1,14 @@
-<%=@post.title %>
+<% if user_signed_in? && current_user.id == @post.user_id %>
+  <div class="prototype__manage">
+    <%= link_to "編集する", edit_post_path(@post.id), class: :post__btn %>
+    <%= link_to "削除する", post_path(@post.id), method: :delete, class: :post__destroy %>
+  </div>
+<% end %>
+
+
+<div class="">
+
+  <%=@post.title %>
 
   <%= image_tag @post.images[0], class: "main-image" %><br>
   <div class="other-images">
@@ -9,28 +19,22 @@
     <%end%>
   </div>
 
-<div class="">
-<%= @post.place.name %>
-</div>
-<div class="">
-<%= @post.hotel %>
-</div>
-<div class="">
-<%= @post.room %>
-</div>
-<div class="">
-<%= @post.check_in %>
-<%= @post.check_out %>
-</div>
-<div class="">
-<%= @post.text %>
-</div>
-<div class="">
-<%= @post.user.nickname %>
-
-      <% if user_signed_in? && current_user.id == @post.user_id %>
-        <div class="prototype__manage">
-          <%= link_to "編集する", edit_post_path(@post.id), class: :post__btn %>
-          <%= link_to "削除する", post_path(@post.id), method: :delete, class: :post__btn %>
-        </div>
-      <% end %>
+  <div class="">
+    <%= @post.place.name %>
+  </div>
+  <div class="">
+    <%= @post.hotel %>
+  </div>
+  <div class="">
+    <%= @post.room %>
+  </div>
+  <div class="">
+    <%= @post.check_in %>
+  <%= @post.check_out %>
+  </div>
+  <div class="">
+    <%= @post.text %>
+  </div>
+  <div class="">
+    <%= @post.user.nickname %>
+  </div>
