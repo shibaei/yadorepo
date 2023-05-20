@@ -1,15 +1,15 @@
 <% if user_signed_in? && current_user.id == @post.user_id %>
-  <div class="prototype__manage">
+  <div class="post__manage">
     <%= link_to "編集する", edit_post_path(@post.id), class: :post__btn %>
     <%= link_to "削除する", post_path(@post.id), method: :delete, class: :post__destroy %>
   </div>
 <% end %>
 
 
-<div class="">
-
-  <%=@post.title %>
-
+<div class="post__wrapper">
+<div class="detail__title">
+  <%=@post.title%>
+</div>
   <%= image_tag @post.images[0], class: "main-image" %><br>
   <div class="other-images">
     <% @post.images[1..-1].each do |image| %>

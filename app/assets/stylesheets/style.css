@@ -161,6 +161,12 @@ img {
 
 /* 記事　詳細ページ */
 
+.post__manage{
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
 .post__btn {
   text-align: center;
   background-color: #f2dbc2;
@@ -182,4 +188,16 @@ img {
   text-decoration: none;
   border-radius: 3px;
   border: 1px #3D3D3D solid;
+}
+
+/* 詳細 */
+
+.post__wrapper{
+  min-height: calc(100vh - 161px);
+  padding: 0 50px;
+}
+
+.main-image{
+  height: 420px;
+  width: 560px;
 }
