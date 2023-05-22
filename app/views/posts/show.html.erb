@@ -7,9 +7,9 @@
 
 
 <div class="post__wrapper">
-<div class="detail__title">
-  <%=@post.title%>
-</div>
+  <div class="detail__title">
+    <%=@post.title%>
+  </div>
   <%= image_tag @post.images[0], class: "main-image" %><br>
   <div class="other-images">
     <% @post.images[1..-1].each do |image| %>
@@ -18,23 +18,23 @@
       </div>
     <%end%>
   </div>
-
-  <div class="">
-    <%= @post.place.name %>
-  </div>
-  <div class="">
-    <%= @post.hotel %>
-  </div>
-  <div class="">
-    <%= @post.room %>
-  </div>
-  <div class="">
-    <%= @post.check_in %>
-  <%= @post.check_out %>
-  </div>
-  <div class="">
-    <%= @post.text %>
-  </div>
-  <div class="">
-    <%= @post.user.nickname %>
-  </div>
+</div>
+<div class="">
+  <%= @post.place.name %>
+</div>
+<div class="">
+  <%= @post.hotel %>
+</div>
+<div class="">
+  <%= @post.room %>
+</div>
+<div class="">
+  <%= @post.check_in %>
+<%= @post.check_out %>
+</div>
+<div class="">
+  <%= @post.text %>
+</div>
+<div class="">
+  <%= @post.user.nickname %>
+</div>
