@@ -29,8 +29,8 @@
   <%= @post.room %>
 </div>
 <div class="">
-  <%= @post.check_in %>
-<%= @post.check_out %>
+宿泊期間
+  <%= @post.check_in.strftime("%Y年%m月%d日") %>〜<%= @post.check_out.strftime("%Y年%m月%d日") %>
 </div>
 <div class="">
   <%= @post.text %>
