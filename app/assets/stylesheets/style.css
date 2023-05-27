@@ -193,7 +193,7 @@ img {
 
 .post__wrapper{
   min-height: calc(100vh - 161px);
-  padding: 0 200px;
+  padding: 20px 200px;
 }
 
 .main-image{
@@ -203,6 +203,10 @@ img {
 .detail__title{
   font-weight:bold;
   font-size: 20px;
-  padding-bottom: 10px;
-  padding-top: 30px;
+  padding: 10px 0;
+  color: #3D3D3D;
+}
+
+.length{
+  color: #999999;
 }

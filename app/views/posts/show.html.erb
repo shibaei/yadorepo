@@ -7,8 +7,15 @@
 
 
 <div class="post__wrapper">
+  <div class="length">
+  宿泊期間：
+    <%= @post.check_in.strftime("%Y年%m月%d日") %>〜<%= @post.check_out.strftime("%Y年%m月%d日") %>
+  </div>
   <div class="detail__title">
-    <%=@post.title%>
+    【<%= @post.place.name %>】<%=@post.title%>
+  </div>
+  <div class="">
+    by：<%= @post.user.nickname %>
   </div>
   <%= image_tag @post.images[0], class: "main-image" %><br>
   <div class="other-images">
@@ -18,23 +25,11 @@
       </div>
     <%end%>
   </div>
-</div>
-<div class="">
-  場所：<%= @post.place.name %>
-</div>
-<div class="">
-  ホテル：<%= @post.hotel %>
-</div>
-<div class="">
-  部屋：<%= @post.room %>
-</div>
-<div class="">
-宿泊期間
-  <%= @post.check_in.strftime("%Y年%m月%d日") %>〜<%= @post.check_out.strftime("%Y年%m月%d日") %>
-</div>
-<div class="">
-  <%= @post.text %>
-</div>
-<div class="">
-  by：<%= @post.user.nickname %>
+  <div class="">
+    お宿：<%= @post.hotel %>　部屋：<%= @post.room %>
+  </div>
+  <div class="">
+    <%= @post.text %>
+  </div>
+  
 </div>
