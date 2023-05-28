@@ -63,12 +63,11 @@
   font-size: 10px;
 }
 
-/* 画像処理 */
+/* 投稿画像処理 */
 
 img {
   height: 200px;
   width: 200px;
-  /* 縦横比を保ったまま、画像を縦横100pxのサイズに収めるプロパティです */
   object-fit: contain;
 }
 
@@ -138,7 +137,6 @@ img {
 }
 .card__img {
   margin-bottom: 16px;
-  
   width: 100%;
 }
 .card__title {
@@ -193,20 +191,48 @@ img {
 
 .post__wrapper{
   min-height: calc(100vh - 161px);
-  padding: 20px 200px;
+  padding: 20px 15%;
 }
 
 .main-image{
-  height: 540px;
-  width: 720px;
+  height: 75%;
+  width: 100%;
+  padding-bottom: 1%;
 }
-.detail__title{
+
+.post__title{
   font-weight:bold;
   font-size: 20px;
-  padding: 10px 0;
+  padding-top: 10px;
   color: #3D3D3D;
+  padding-bottom: 5px;
 }
 
 .length{
   color: #999999;
+}
+
+.post__user{
+  text-align:right;
+  padding-right: 3%;
+}
+.post__information{
+  text-align: center;
+}
+
+.other-images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.other-image{
+  width: calc((100% - 50px) / 2);
+  height: calc((70% - 50px) / 2);
+  padding: 1% 0;
+}
+
+.post__text{
+  font-size: 17px;
+  line-height:1.5em;
 }

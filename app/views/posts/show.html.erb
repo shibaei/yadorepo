@@ -11,25 +11,23 @@
   宿泊期間：
     <%= @post.check_in.strftime("%Y年%m月%d日") %>〜<%= @post.check_out.strftime("%Y年%m月%d日") %>
   </div>
-  <div class="detail__title">
+  <div class="post__title">
     【<%= @post.place.name %>】<%=@post.title%>
   </div>
-  <div class="">
+    <div class="post__information">
+    ◆宿：<%= @post.hotel %>　　◆部屋：<%= @post.room %>
+  </div>
+    <div class="post__user">
     by：<%= @post.user.nickname %>
   </div>
   <%= image_tag @post.images[0], class: "main-image" %><br>
   <div class="other-images">
     <% @post.images[1..-1].each do |image| %>
-      <div class="other-image">
-        <%= image_tag image %>
-      </div>
+        <%= image_tag image ,class: "other-image" %>
     <%end%>
   </div>
-  <div class="">
-    お宿：<%= @post.hotel %>　部屋：<%= @post.room %>
-  </div>
-  <div class="">
-    <%= @post.text %>
+  <div class="post__text">
+    <%= safe_join(@post.text.split("\n"),tag(:br)) %>
   </div>
   
 </div>
