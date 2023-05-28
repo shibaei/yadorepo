@@ -1,15 +1,21 @@
 <div class="card">
-  <%= link_to image_tag(post.images[0], class: :card__img ), post_path(post.id)%>
-  <div class="card__body">
-    <%= link_to post.title, post_path(post.id), class: :card__title%>
+  <%= link_to(post_path(post.id)) do%>
+    <%= image_tag post.images[0], class: "card__img" %>
+    <div class="card__title">
+      【<%= post.place.name %>】<%=post.title%>
+    </div>
+    <div class="card__information">
+      ◆宿　：<%= post.hotel %><br>
+      ◆部屋：<%= post.room %>
+    </div>
     <p class="card__summary">
       <%= post.text[0..82] %>
       <% if post.text.length >= 83 %>
         ...
       <% end %>
     </p>
-    <div class="card__user">
-      by:<%= post.user.nickname%>
-    </div>
-  </div>
+   <% end %>
+       <div class="card__user">
+        by:<%= post.user.nickname%>
+      </div>
 </div>

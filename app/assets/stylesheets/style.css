@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 /* ヘッダー */
 
 .header {
@@ -27,7 +31,6 @@
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #3D3D3D;
-  text-decoration: none;
   user-select: none;
   border: 1px #3D3D3D solid;
   border-radius: 3px;
@@ -43,7 +46,6 @@
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #3D3D3D;
-  text-decoration: none;
   user-select: none;
 }
 .nav__logout:hover{
@@ -133,7 +135,7 @@ img {
   padding: 10px;
   box-shadow:  0 0 5px #999999;
   border-radius: 3px;
-  min-height: 400px;
+  min-height: 440px;
 }
 .card__img {
   margin-bottom: 16px;
@@ -144,11 +146,16 @@ img {
   font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
-  text-decoration: none;
   color: #3D3D3D;
+}
+
+.card__information{
+  font-size: 1.1vw;
+  color: #999999;
 }
 .card__summary {
   font-size: 1.25vw;
+  color: #3D3D3D;
 }
 .card__user {
   display: block;
@@ -172,7 +179,6 @@ img {
   margin: 20px 0px;
   padding: 2vh 10vw;
   border-radius: 3px;
-  text-decoration: none;
   border: 1px #3D3D3D solid;
 }
 
@@ -182,7 +188,6 @@ img {
   color: #3D3D3D;
   margin: 20px 0px;
   padding: 2vh 10vw;
-  text-decoration: none;
   border-radius: 3px;
   border: 1px #3D3D3D solid;
 }
