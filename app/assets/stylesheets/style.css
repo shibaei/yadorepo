@@ -98,16 +98,62 @@ img {
 /* フォーム */
 
 .form__wrapper{
-  background-color: red;
   padding: 0 15%;
 
 }
-.post-field {
-  background-color: #665747;
+.posts-field {
   width: 70vw;
   min-width: 450px;
-  padding-left: 20%;
 }
+
+.posts-sentence {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+
+.posts-sentence {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  height: 300px;
+}
+
+.posts-text{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+
+.field{
+  padding: 5px 0;
+}
+
+label{
+  font-weight: bold;
+}
+
+.select-box {
+  height: 30px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+
+.posts-day {
+  width: calc((100% - 20px) / 3);;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #999999;
+}
+
 
 /* 検索 */
 .search-form {

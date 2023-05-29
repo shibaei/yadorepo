@@ -1,41 +1,41 @@
 
-<div class="post-field">
+<div class="posts-field">
   <%= form_with model: post, id: 'new_post', local: true do |f|%>
     <%= render 'shared/error_messages', model: f.object %>
 
     <div class="field">
       <%= f.label :title, "タイトル" %><br />
-      <%= f.text_field :title, id:"post_title" %>
+      <%= f.text_field :title, id:"post_title" ,class:"posts-text"%>
     </div>
 
     <div class="field">
       <%= f.label :place_id, "場所" %><br />
-      <%= f.collection_select(:place_id, Place.all, :id, :name, {}) %>
+      <%= f.collection_select(:place_id, Place.all, :id, :name,{}, {class:"select-box"}) %>
     </div>
 
     <div class="field">
       <%= f.label :hotel, "ホテル名" %><br />
-      <%= f.text_field :hotel, id:"post_hotel" %>
+      <%= f.text_field :hotel, id:"post_hotel" ,class:"posts-text"%>
     </div>
 
     <div class="field">
       <%= f.label :room, "部屋の種類　例)シングル" %><br />
-      <%= f.text_field :room, id:"post_room" %>
+      <%= f.text_field :room, id:"post_room" ,class:"posts-text"%>
     </div>
 
     <div class="field">
       <%= f.label :check_in, "チェックイン日" %><br />
-      <%= f.date_select :check_in, id:"post_check_in" %>
+      <%= f.date_select(:check_in, {use_month_numbers: true}, { id: "post_check_in", class: "posts-day" }) %>
     </div>
 
     <div class="field">
       <%= f.label :check_out, "チェックアウト日" %><br />
-      <%= f.date_select :check_out, id:"post_check_out" %>
+      <%= f.date_select(:check_out, {use_month_numbers: true}, { id: "post_check_out", class: "posts-day" }) %>
     </div>
 
     <div class="field">
       <%= f.label :text, "レポ" %><br />
-      <%= f.text_area :text, id:"post_text" %>
+      <%= f.text_area :text, id:"post_text" ,class:"posts-sentence"%>
     </div>
 
 
