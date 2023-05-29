@@ -20,7 +20,7 @@
     <div class="post__user">
     by：<%= @post.user.nickname %>
   </div>
-  <%= image_tag @post.images[0], class: "main-image" %><br>
+  <%= image_tag @post.images[0], class: "post-main-image" %><br>
   <div class="other-images">
     <% @post.images[1..-1].each do |image| %>
         <%= image_tag image ,class: "other-image" %>

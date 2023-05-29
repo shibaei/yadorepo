@@ -1,54 +1,57 @@
 
+<div class="post-field">
+  <%= form_with model: post, id: 'new_post', local: true do |f|%>
+    <%= render 'shared/error_messages', model: f.object %>
 
-<%= form_with model: post, id: 'new_post', local: true do |f|%>
-  <%= render 'shared/error_messages', model: f.object %>
-
-  <div class="field">
-    <%= f.label :title, "タイトル" %><br />
-    <%= f.text_field :title, id:"post_title" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :place_id, "場所" %><br />
-    <%= f.collection_select(:place_id, Place.all, :id, :name, {}) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :hotel, "ホテル名" %><br />
-    <%= f.text_field :hotel, id:"post_hotel" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :room, "部屋の種類　例)シングル" %><br />
-    <%= f.text_field :room, id:"post_room" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :check_in, "チェックイン日" %><br />
-    <%= f.date_select :check_in, id:"post_check_in" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :check_out, "チェックアウト日" %><br />
-    <%= f.date_select :check_out, id:"post_check_out" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :text, "レポ" %><br />
-    <%= f.text_area :text, id:"post_text" %>
-  </div>
-
-
-  <div class="image-field">
-    <%= f.label :images, "画像" %><br />
-    <div id="previews"></div>
-    <div class="click-upload">
-      <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
+    <div class="field">
+      <%= f.label :title, "タイトル" %><br />
+      <%= f.text_field :title, id:"post_title" %>
     </div>
 
-  <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :place_id, "場所" %><br />
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}) %>
+    </div>
 
-<%= link_to "＜　内容を削除してトップへ戻る", root_path, class: :return%>
+    <div class="field">
+      <%= f.label :hotel, "ホテル名" %><br />
+      <%= f.text_field :hotel, id:"post_hotel" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :room, "部屋の種類　例)シングル" %><br />
+      <%= f.text_field :room, id:"post_room" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :check_in, "チェックイン日" %><br />
+      <%= f.date_select :check_in, id:"post_check_in" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :check_out, "チェックアウト日" %><br />
+      <%= f.date_select :check_out, id:"post_check_out" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :text, "レポ" %><br />
+      <%= f.text_area :text, id:"post_text" %>
+    </div>
+
+
+    <div class="image-field">
+      <%= f.label :images, "画像" %><br />
+      <div id="previews"></div>
+      <div class="click-upload">
+        <%= f.file_field :images, name: 'post[images][]', data: {index: 0} %>
+        </div>
+      </div>
+
+    <div class="actions">
+      <%= f.submit "保存する", class: :form__btn  %>
+    </div>
+  <% end %>
+
+  <%= link_to "＜　内容を削除してトップへ戻る", root_path, class: :return%>
+
+</div>

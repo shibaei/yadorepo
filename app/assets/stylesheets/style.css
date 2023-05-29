@@ -95,6 +95,20 @@ img {
   width: 50px;
 }
 
+/* フォーム */
+
+.form__wrapper{
+  background-color: red;
+  padding: 0 15%;
+
+}
+.post-field {
+  background-color: #665747;
+  width: 70vw;
+  min-width: 450px;
+  padding-left: 20%;
+}
+
 /* 検索 */
 .search-form {
   text-align: center;
@@ -199,7 +213,7 @@ img {
   padding: 20px 15%;
 }
 
-.main-image{
+.post-main-image{
   height: 75%;
   width: 100%;
   padding-bottom: 1%;
