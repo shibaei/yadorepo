@@ -23,14 +23,34 @@
       <%= f.text_field :room, id:"post_room" ,class:"posts-text"%>
     </div>
 
-    <div class="field">
+    <div class="posts-days">
       <%= f.label :check_in, "チェックイン日" %><br />
-      <%= f.date_select(:check_in, {use_month_numbers: true}, { id: "post_check_in", class: "posts-day" }) %>
+      <%= raw sprintf(
+                f.date_select(
+                  :check_in,
+                  id: "post_check_in",
+                  class: "posts-day",
+                  use_month_numbers: true,
+                  prompt:'---',
+                  end_year: (Time.now.year - 10),
+                  start_year: Time.now.year,
+                  date_separator: '%s'),
+                '年 ', '月 ') + '日' %>
     </div>
 
-    <div class="field">
+    <div class="posts-days">
       <%= f.label :check_out, "チェックアウト日" %><br />
-      <%= f.date_select(:check_out, {use_month_numbers: true}, { id: "post_check_out", class: "posts-day" }) %>
+            <%= raw sprintf(
+                f.date_select(
+                  :check_out,
+                  id: "post_check_out",
+                  class: "posts-day",
+                  use_month_numbers: true,
+                  prompt:'---',
+                  end_year: (Time.now.year - 10),
+                  start_year: Time.now.year,
+                  date_separator: '%s'),
+                '年 ', '月 ') + '日' %>
     </div>
 
     <div class="field">
@@ -48,10 +68,10 @@
       </div>
 
     <div class="actions">
-      <%= f.submit "保存する", class: :form__btn  %>
+      <%= f.submit "保存する",class:"sell-btn" %>
     </div>
   <% end %>
-
-  <%= link_to "＜　内容を削除してトップへ戻る", root_path, class: :return%>
-
+  <div class="back">
+    <%= link_to "＜　内容を削除してトップへ戻る", root_path, class: :return ,class:"back-btn"%>
+  </div>
 </div>
