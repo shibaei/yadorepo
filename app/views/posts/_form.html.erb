@@ -1,11 +1,11 @@
 
-<div class="posts-field">
+<div class="form-field">
   <%= form_with model: post, id: 'new_post', local: true do |f|%>
     <%= render 'shared/error_messages', model: f.object %>
 
     <div class="field">
       <%= f.label :title, "タイトル" %><br />
-      <%= f.text_field :title, id:"post_title" ,class:"posts-text"%>
+      <%= f.text_field :title, id:"post_title" ,class:"form-text"%>
     </div>
 
     <div class="field">
@@ -15,21 +15,21 @@
 
     <div class="field">
       <%= f.label :hotel, "ホテル名" %><br />
-      <%= f.text_field :hotel, id:"post_hotel" ,class:"posts-text"%>
+      <%= f.text_field :hotel, id:"post_hotel" ,class:"form-text"%>
     </div>
 
     <div class="field">
       <%= f.label :room, "部屋の種類　例)シングル" %><br />
-      <%= f.text_field :room, id:"post_room" ,class:"posts-text"%>
+      <%= f.text_field :room, id:"post_room" ,class:"form-text"%>
     </div>
 
-    <div class="posts-days">
+    <div class="form-days">
       <%= f.label :check_in, "チェックイン日" %><br />
       <%= raw sprintf(
                 f.date_select(
                   :check_in,
                   id: "post_check_in",
-                  class: "posts-day",
+                  class: "form-day",
                   use_month_numbers: true,
                   prompt:'---',
                   end_year: (Time.now.year - 10),
@@ -38,13 +38,13 @@
                 '年 ', '月 ') + '日' %>
     </div>
 
-    <div class="posts-days">
+    <div class="form-days">
       <%= f.label :check_out, "チェックアウト日" %><br />
             <%= raw sprintf(
                 f.date_select(
                   :check_out,
                   id: "post_check_out",
-                  class: "posts-day",
+                  class: "form-day",
                   use_month_numbers: true,
                   prompt:'---',
                   end_year: (Time.now.year - 10),
@@ -55,7 +55,7 @@
 
     <div class="field">
       <%= f.label :text, "レポ" %><br />
-      <%= f.text_area :text, id:"post_text" ,class:"posts-sentence"%>
+      <%= f.text_area :text, id:"post_text" ,class:"form-sentence"%>
     </div>
 
 
@@ -68,7 +68,7 @@
       </div>
 
     <div class="actions">
-      <%= f.submit "保存する",class:"sell-btn" %>
+      <%= f.submit "保存する",class:"register-btn" %>
     </div>
   <% end %>
   <div class="back">
