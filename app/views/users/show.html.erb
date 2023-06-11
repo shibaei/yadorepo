@@ -1,0 +1,4 @@
+<h1 class="text_top"><%= @nickname %>さんの投稿一覧</h1>
+<div class="card__wrapper">
+  <%= render partial: 'posts/post', collection: @posts %>
+</div>

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, only: [:edit, :destroy]
   
     def index
-      @posts = Post.all
+      @posts = Post.includes(:user)
     end
   
     def show

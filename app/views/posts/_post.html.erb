@@ -15,7 +15,9 @@
       <% end %>
     </p>
    <% end %>
-       <div class="card__user">
-        by:<%= post.user.nickname%>
+      <div class="card__user">
+        <a href="/users/<%= post.user.id %>">
+          by : <%= post.user.nickname %>
+        </a>
       </div>
 </div>
