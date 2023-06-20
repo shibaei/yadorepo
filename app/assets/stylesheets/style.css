@@ -24,7 +24,7 @@ a {
   height: 50px;
 }
 
-.nav__btn{
+.nav-btn{
   background-color: #f2dbc2;
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -35,19 +35,19 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
 }
-.nav__btn:hover{
+.nav-btn:hover{
   color: #665039;
   background: #ffffff ;
 }
 
-.nav__user,.nav__logout{
+.nav-user,.nav-logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #3D3D3D;
   user-select: none;
 }
-.nav__logout:hover{
+.nav-logout:hover{
   opacity: 0.5;
 }
 
@@ -96,7 +96,7 @@ img {
 
 /* フォーム */
 
-.form__wrapper{
+.form-wrapper{
   padding: 0 15%;
 
 }
@@ -210,7 +210,7 @@ label{
   margin-top: 50px;
 }
 
-.card__wrapper {
+.card-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -226,11 +226,11 @@ label{
   border-radius: 3px;
   min-height: 440px;
 }
-.card__img {
+.card-img {
   margin-bottom: 16px;
   width: 100%;
 }
-.card__title {
+.card-title {
   display: block;
   font-size: 20px;
   margin-bottom: 8px;
@@ -238,19 +238,19 @@ label{
   color: #3D3D3D;
 }
 
-.card__information{
+.card-information{
   font-size: 1.1vw;
   color: #999999;
 }
-.card__summary {
+.card-summary {
   font-size: 1.25vw;
   color: #3D3D3D;
 }
-.card__user {
+.card-user {
   display: block;
 }
 
-.card__user a{
+.card-user a{
   font-size: 15px;
   color: #999;
   text-decoration: underline;
@@ -258,13 +258,13 @@ label{
 
 /* 記事　詳細ページ */
 
-.post__manage{
+.post-manage{
   padding: 0 30px;
   display: flex;
   justify-content: space-around;
 }
 
-.post__btn {
+.post-btn {
   text-align: center;
   background-color: #f2dbc2;
   color: #3D3D3D;
@@ -274,7 +274,7 @@ label{
   border: 1px #3D3D3D solid;
 }
 
-.post__destroy {
+.post-destroy {
   background-color: lightgray;
   text-align: center;
   color: #3D3D3D;
@@ -286,7 +286,7 @@ label{
 
 /* 詳細 */
 
-.post__wrapper{
+.post-wrapper{
   min-height: calc(100vh - 161px);
   padding: 20px 15%;
 }
@@ -297,7 +297,7 @@ label{
   padding-bottom: 1%;
 }
 
-.post__title{
+.post-title{
   font-weight:bold;
   font-size: 20px;
   padding-top: 10px;
@@ -309,11 +309,11 @@ label{
   color: #999999;
 }
 
-.post__user{
+.post-user{
   text-align:right;
   padding-right: 3%;
 }
-.post__information{
+.post-information{
   text-align: center;
 }
 
@@ -329,7 +329,7 @@ label{
   padding: 1% 0;
 }
 
-.post__text{
+.post-text{
   font-size: 17px;
   line-height:1.5em;
 }

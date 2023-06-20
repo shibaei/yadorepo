@@ -1,23 +1,23 @@
 <% if user_signed_in? && current_user.id == @post.user_id %>
-  <div class="post__manage">
-    <%= link_to "編集する", edit_post_path(@post.id), class: :post__btn %>
-    <%= link_to "削除する", post_path(@post.id), method: :delete, class: :post__destroy %>
+  <div class="post-manage">
+    <%= link_to "編集する", edit_post_path(@post.id), class: "post-btn" %>
+    <%= link_to "削除する", post_path(@post.id), method: :delete, class: "post-destroy" %>
   </div>
 <% end %>
 
 
-<div class="post__wrapper">
+<div class="post-wrapper">
   <div class="length">
   宿泊期間：
     <%= @post.check_in.strftime("%Y年%m月%d日") %>〜<%= @post.check_out.strftime("%Y年%m月%d日") %>
   </div>
-  <div class="post__title">
+  <div class="post-title">
     【<%= @post.place.name %>】<%=@post.title%>
   </div>
-    <div class="post__information">
+    <div class="post-information">
     ◆宿：<%= @post.hotel %>　　◆部屋：<%= @post.room %>
   </div>
-    <div class="post__user">
+    <div class="post-user">
     by：<%= @post.user.nickname %>
   </div>
   <%= image_tag @post.images[0], class: "post-main-image" %><br>
@@ -26,7 +26,7 @@
         <%= image_tag image ,class: "other-image" %>
     <%end%>
   </div>
-  <div class="post__text">
+  <div class="post-text">
     <%= safe_join(@post.text.split("\n"),tag(:br)) %>
   </div>
   
